@@ -335,7 +335,7 @@ var PhotoSwipeUI_Default =
 			}
 		},
 		_applyNavBarGaps = function(item) {
-			var gap = item.vGap;
+			var gap = item.padding;
 
 			if( _fitControlsInViewport() ) {
 				
@@ -645,8 +645,8 @@ var PhotoSwipeUI_Default =
 			framework.addClass( _controls, 'pswp__ui--hidden');
 		});
 
-		_listen('parseVerticalMargin', _applyNavBarGaps);
-		
+		_listen('padding', _applyNavBarGaps);
+
 		_setupUIElements();
 
 		if(_options.shareEl && _shareButton && _shareModal) {
